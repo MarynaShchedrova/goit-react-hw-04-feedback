@@ -12,11 +12,11 @@ export const App = () => {
 
   const handleFeedback = e => {
     if (e === 'Good') {
-      setGood(good + 1);
+      this.setState(prevState => ({ good: prevState.good + 1 }));
     } else if (e === 'Neutral') {
-      setNeutral(neutral + 1);
+      this.setState(prevState => ({ neutral: prevState.neutral + 1 }));
     } else if (e === 'Bad') {
-      setBad(bad + 1);
+      this.setState(prevState => ({ bad: prevState.bad + 1 }));
     }
   };
 
